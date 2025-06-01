@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-neutral-800 bg-neutral-50 overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+    line-height: 120%;
+  }
+  
+  p, li {
+    line-height: 150%;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 rounded-md bg-primary-500 text-white font-medium transition-all 
+    hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-300;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-md border border-primary-500 text-primary-500 font-medium transition-all 
+    hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 relative overflow-hidden;
+  }
+  
+  .skill-bar {
+    @apply h-2.5 rounded-full bg-primary-100 overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full rounded-full bg-gradient-to-r from-primary-500 to-secondary-500;
+  }
+  
+  .chatbot-container {
+    @apply fixed bottom-6 right-6 z-50;
+  }
+  
+  .chatbot-button {
+    @apply w-14 h-14 rounded-full flex items-center justify-center bg-primary-500 
+    shadow-lg text-white cursor-pointer transition-all hover:bg-primary-600;
+  }
+  
+  .chatbot-panel {
+    @apply absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-lg shadow-xl 
+    border border-neutral-200 overflow-hidden;
+  }
+  
+  .floating-particles {
+    @apply absolute opacity-70 mix-blend-screen;
+    animation: float 15s infinite ease-in-out;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes floatFast {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.typing-animation::after {
+  content: '|';
+  animation: blink 1s infinite step-end;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
