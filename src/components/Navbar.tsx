@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', to: 'home' },
+  { name: 'About', to: 'about' },
+  { name: 'Skills', to: 'skills' },
+  { name: 'Projects', to: 'projects' },
+  { name: 'Experience', to: 'experience' },
+  { name: 'Contact', to: 'contact' },
 ];
 
 const Navbar: React.FC = () => {
@@ -21,9 +22,7 @@ const Navbar: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -47,21 +46,36 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center space-x-8">
+          <ul className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.href}
-                  className={`font-medium transition-colors ${
+                <Link
+                  to={link.to}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-60}
+                  activeClass="text-primary-600 underline"
+                  className={`cursor-pointer font-medium transition-colors ${
                     isScrolled
                       ? 'text-neutral-700 hover:text-primary-500'
                       : 'text-white hover:text-primary-200'
                   }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-1.5 rounded-full bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition"
+              >
+                Resume
+              </a>
+            </li>
           </ul>
 
           {/* Mobile Navigation Toggle */}
@@ -96,15 +110,31 @@ const Navbar: React.FC = () => {
             <ul className="flex flex-col">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.to}
+                    smooth={true}
+                    duration={500}
+                    offset={-60}
+                    spy={true}
+                    activeClass="text-primary-600 font-semibold"
                     className="block py-2 px-4 text-neutral-700 hover:bg-neutral-100 hover:text-primary-500"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
+              <li className="px-4 pt-2">
+                <a
+                  href="/AmruthDevineni_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center w-full bg-primary-600 text-white rounded-full py-2 hover:bg-primary-700 transition"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </motion.div>
         )}
