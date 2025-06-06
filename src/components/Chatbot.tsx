@@ -19,6 +19,10 @@ const chatbotData = {
   contact: "You can reach Amruth via email at amrdev@bu.edu or by phone at +1 925-406-5790. You can also connect with him on LinkedIn at linkedin.com/in/Amruth-Devineni/",
   availability: "Amruth is currently open to job opportunities and collaborations in the field of data science and machine learning.",
   resume: "Amruth's resume is available for download by pressing the 'Resume' button in the navigation bar.",
+  project_stock: "The Real-Time Stock Price Prediction project used financial and sentiment data to predict stock prices. It achieved an R² of 0.99975 and featured a live dashboard.",
+  project_housing: "The University Accountability Ordinance analyzed 190K+ student housing records in Boston. Amruth worked with Boston City Council to inform housing policy.",
+  project_financial: "The Financial GPT project uses FinBERT and vector search to extract insights from SEC 10-K filings. It’s deployed on Streamlit.",
+  project_comic: "The Automated Comic Panel Synthesis uses LLaMA 3 and Stable Diffusion to generate Peanuts-style comic strips from text prompts.",
   fallback: "I don't have specific information about that. Would you like to know about Amruth's education, skills, projects, experience, resume, or contact information?",
 };
 
@@ -65,7 +69,27 @@ const keywordMap: { [key: string]: string } = {
   'resume': chatbotData.resume,
   'download': chatbotData.resume,
   'resume download': chatbotData.resume,
-  
+
+  'stock project': chatbotData.project_stock,
+  'real-time stock': chatbotData.project_stock,
+  'stock price prediction': chatbotData.project_stock,
+
+  'housing project': chatbotData.project_housing,
+  'university ordinance': chatbotData.project_housing,
+  'boston housing': chatbotData.project_housing,
+  'University Accountability': chatbotData.project_housing,
+
+  'financial gpt': chatbotData.project_financial,
+  'financial project': chatbotData.project_financial,
+  'financial data': chatbotData.project_financial,
+  'Financial Document': chatbotData.project_financial,
+
+  'comic project': chatbotData.project_comic,
+  'comics': chatbotData.project_comic,
+  'comic synthesis': chatbotData.project_comic,
+  'storyboard': chatbotData.project_comic,
+  'Comic Panel': chatbotData.project_comic,
+
   'hi': chatbotData.greeting,
   'hello': chatbotData.greeting,
   'hey': chatbotData.greeting,
