@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
             ))}
             <li>
               <a
-                href="/resume.pdf"
+                href="/MyPortfolio/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-1.5 rounded-full bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition"
