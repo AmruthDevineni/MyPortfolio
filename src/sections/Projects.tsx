@@ -3,6 +3,7 @@ import { Parallax } from 'react-scroll-parallax';
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
 import ComicIMG from '../assets/comic_panel.png';
+import UAOIMG from '../assets/UniversityAccountabilityOrdinance.png';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -19,7 +20,7 @@ const Projects: React.FC = () => {
         "Python", "Microsoft Azure", "Scikit-learn", "Pandas", "NumPy", "Power BI", "Alpha Vantage AI"
       ],
       image: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      imageAlt: "Stock market data visualization"
+      imageAlt: "Stock market data visualization",
     },
     {
       title: "University Accountability Ordinance",
@@ -33,12 +34,12 @@ const Projects: React.FC = () => {
       technologies: [
         "Python", "Pandas", "NumPy", "SQL", "Looker Studio", "Power BI"
       ],
-      image: "https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      imageAlt: "Boston city housing data visualization"
+      image: UAOIMG,
+      imageAlt: "Boston city housing data visualization",
     },
     {
       title: "Financial GPT - AI-Powered Document Analyzer",
-      period: "2024",
+      period: "Jan 2025 - April 2025",
       description: "Developed an AI-powered financial document analyzer that helps investment bankers and traders quickly extract insights from extensive 10-K filings. The system uses natural language processing to summarize complex financial documents and answer specific queries.",
       achievements: [
         "Built a system that automatically processes SEC filings using FinBERT embeddings and vectorization",
@@ -49,11 +50,13 @@ const Projects: React.FC = () => {
         "Python", "LLaMA 3", "FAISS", "FinBERT", "Streamlit"
       ],
       image: "https://images.pexels.com/photos/6802048/pexels-photo-6802048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      imageAlt: "Financial data analysis dashboard"
+      imageAlt: "Financial data analysis dashboard",
+      githubUrl: "https://github.com/AmruthDevineni/financial_chatbot",
+      websiteUrl: "https://financialchatbot.streamlit.app/"
     },
     {
       title: "Automated Comic Panel Synthesis",
-      period: "May 2025",
+      period: "Jan 2025 - April 2025",
       description: "Created an automated pipeline for generating stylistically faithful Peanuts-style comic strips from natural language prompts. The system combines LLMs for narrative generation with fine-tuned diffusion models for visual synthesis.",
       achievements: [
         "Integrated LLaMA 3 for contextual scene and dialogue generation with a fine-tuned Stable Diffusion model",
@@ -64,7 +67,8 @@ const Projects: React.FC = () => {
         "Python", "LLaMA 3", "Stable Diffusion 2.1", "EasyOCR", "OpenCV"
       ],
       image: ComicIMG,
-      imageAlt: "AI-generated comic panels"
+      imageAlt: "AI-generated comic panels",
+      githubUrl: "https://github.com/AmruthDevineni/ai-storyboard-gen"
     }
   ];
 
@@ -90,6 +94,8 @@ const Projects: React.FC = () => {
               technologies={project.technologies}
               image={project.image}
               imageAlt={project.imageAlt}
+              githubUrl={project.githubUrl}
+              websiteUrl={project.websiteUrl}
               delay={index}
             />
           ))}

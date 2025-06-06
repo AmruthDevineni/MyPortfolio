@@ -2,12 +2,27 @@ import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import SectionHeading from '../components/SectionHeading';
 import ExperienceTimeline from '../components/ExperienceTimeline';
+import Skills from './Skills';
 
 const Experience: React.FC = () => {
   const experiences = [
     {
+      title: "Data Engineering Intern",
+      company: "Xnode.ai",
+      companyUrl: 'https://xnode.ai/',
+      period: "May 2025 – Present",
+      description: [
+        "Designed and maintained data pipelines that supported ML model training, evaluation, and deployment workflows.",
+        "Resolved 3 critical bugs in the real-time data ingestion and transformation logic, improving system reliability and training data accuracy.",
+        "Assisted in optimizing ETL processes for structured and unstructured data used in AI-powered automation tools.",
+        "Collaborated with ML engineers to ensure seamless integration between data pipelines and model-serving infrastructure."
+      ],
+      skills: ['Python', 'Azure DevOps', 'Spark'],
+    },
+    {
       title: 'Data Automation Intern',
       company: 'Infor',
+      companyUrl: 'https://www.infor.com/about',
       period: 'Feb 2024 - May 2024',
       description: [
         'Developed and deployed workflows using Infor RPA, improving process efficiency by 30%',
@@ -16,17 +31,7 @@ const Experience: React.FC = () => {
         'Implemented data-driven RPA workflows that enhanced task efficiency and improved client satisfaction',
         'Demonstrated attention to detail through thorough data cleaning and validation processes',
       ],
-    },
-    {
-      title: "Data Engineering Intern",
-      company: "Xnode.ai",
-      period: "May 2025 – Present",
-      description: [
-        "Designed and maintained data pipelines that supported ML model training, evaluation, and deployment workflows.",
-        "Resolved 3 critical bugs in the real-time data ingestion and transformation logic, improving system reliability and training data accuracy.",
-        "Assisted in optimizing ETL processes for structured and unstructured data used in AI-powered automation tools.",
-        "Collaborated with ML engineers to ensure seamless integration between data pipelines and model-serving infrastructure."
-      ],
+      skills: ['Infor RPA', 'REST APIs', 'Excel'],
     },
   ];
 
