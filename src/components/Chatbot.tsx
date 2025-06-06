@@ -18,7 +18,8 @@ const chatbotData = {
   experience: "Amruth worked as a Data Automation Intern at Infor where he developed and deployed workflows using Infor RPA, improving process efficiency by 30%. He led client meetings, automated repetitive tasks, and implemented data-driven workflows.",
   contact: "You can reach Amruth via email at amrdev@bu.edu or by phone at +1 925-406-5790. You can also connect with him on LinkedIn at linkedin.com/in/Amruth-Devineni/",
   availability: "Amruth is currently open to job opportunities and collaborations in the field of data science and machine learning.",
-  fallback: "I don't have specific information about that. Would you like to know about Amruth's education, skills, projects, experience, or contact information?",
+  resume: "Amruth's resume is available for download by pressing the 'Resume' button in the navigation bar.",
+  fallback: "I don't have specific information about that. Would you like to know about Amruth's education, skills, projects, experience, resume, or contact information?",
 };
 
 // Map keywords to responses
@@ -60,6 +61,10 @@ const keywordMap: { [key: string]: string } = {
   'job opportunity': chatbotData.availability,
   'hiring': chatbotData.availability,
   'open to work': chatbotData.availability,
+  
+  'resume': chatbotData.resume,
+  'download': chatbotData.resume,
+  'resume download': chatbotData.resume,
   
   'hi': chatbotData.greeting,
   'hello': chatbotData.greeting,
